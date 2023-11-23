@@ -19,7 +19,7 @@
         h4{
             font-size: 35px; 
             font-family: 'Radley', serif; 
-            margin: 15px;"
+            margin: 15px;
         }
         span{
             color: #000001;
@@ -157,6 +157,10 @@
             margin-top: 55px;
             /*margin-left: 10px;*/
         }
+        #typic {
+            border-radius: 50% 50% 0% 0%;
+            width: 300px;
+        }
         .star2{
             width:100px;
             height: 100px; 
@@ -190,7 +194,6 @@
         .height{
             height: 59px;
         }
-        }
         #book2{
             width: 200px;
             position: relative;
@@ -222,7 +225,7 @@
         #threelines{
             width: 150px;
             position: relative;
-            top: -60px;"
+            top: -60px;
         }
         #firstmeet{
             text-align: center;
