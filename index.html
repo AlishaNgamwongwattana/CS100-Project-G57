@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Radley:ital@0;1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/externalCSS.css">
+
+        <style>
+          * {
+            box-sizing: border-box;
+          }
+
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+
+          @media only screen and (max-width: 600px) {
+            [class*="col-"] {
+              width: 100%;
+            }
+            div.mycstu {
+              display: block;
+            }
+            .flex{
+                display: block;
+            }
+            .width502 {
+                display: flex;
+                justify-content: center;
+            }
+            #arrow {
+                display: none;
+            }
+            #video{
+                width:300px; 
+                height:auto;
+                padding: 20px;
+                margin-left: 0px;
+            }
+            #divvideo {
+                padding: 0px;
+            }
+          }
+
+          @media only screen and (max-width: 768px) {           
+            [class*="col-"] {
+              width: 100%;
+            }
+            div.mycstu {
+              display: block;
+            }
+            .flex{
+                display: block;
+            }
+            .width502 {
+                display: flex;
+                justify-content: center;
+            }
+            #video{
+                width:300px; 
+                height:auto;
+                padding: 20px;
+                margin-left: 0px;
+            }
+            #divvideo {
+                padding: 0px;
+            }
+          }
+
+        </style>
+        
+    </head>
+    
+    <body>
+
+        <div class="mycstu">
+            <div class="col-3">
+                <img src="image/Star.png" class="star1">
+            </div>
+            <div class="col-6">
+                <div class="centercstu">
+                    <div>
+                        <h1 >Our<span class="cstu">&nbsp;CSTU</span></h1>
+                        <img src="image/Line.png" class="line">
+                    </div>
+                    <div>
+                        <h1 class="passport"><em>Passport</em></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div id="navihome"><em><a href="index.html" class="navilink">Home</a></em></div>
+                <div id="naviactivity"><em><a href="html/myActivities.html" class="navilink">OurActivities</em></a></div>
+            </div>
+        </div>
+
+        <div class="flex">
+           <div class="col-6 width501" >
+                <div> 
+                    <h2 class="gettoknow">Get to know <span class="brown"><em>OUR GROUP!</em></span></h2>
+                </div>
+
+                <div class="personalinfo">               
+                    <h2><em>Personal<br>information</em><br>Member 1:</h2>
+                </div>
+
+                <div class="list">
+                    <ul> 
+                        <li>Name : Alisha Ngamwongwattana</li>
+                        <li>Nickname : Bell</li>
+                        <li>Age : 19</li>
+                        <li>Birthdate : 11th May, 2004</li>
+                        <li>Email &#128231: alisha.nga@dome.tu.ac.th</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-6 width502">
+                    <img src="image/cs100pic.png" id="picofme">
+                    <img src="image/Star2.png" class="star2">
+            </div>
+        </div>
+
+
+        <div class="flex">
+           <div class="col-6 width501" >
+
+                <div class="personalinfo">               
+                    <h2>Member 2:</h2>
+                </div>
+
+                <div class="list">
+                    <ul> 
+                        <li>Name : </li>
+                        <li>Nickname : </li>
+                        <li>Age : </li>
+                        <li>Birthdate :</li>
+                        <li>Graduated from : </li>
+                        <li>Email : </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-6 width502">
+                    <!-- <img src="image/cs100pic.png" id="picofme"> -->
+            </div>
+        </div>
+
+        <div>
+            <img src="image/Star3.png" class="star3">
+        </div>
+        
+    </body>
+</html>

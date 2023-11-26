@@ -1,0 +1,257 @@
+        body{
+            margin-left: 0px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+            background-color: #fcf5e8;
+        }
+        h1{
+            color: #000001;
+            font-family: 'Radley', serif;
+            font-size: 68px;
+            margin: 0px;
+        }
+        h2{
+            color: #9b4819;
+            font-family: 'Radley', serif;
+            font-size: 51px;
+        }
+        h4{
+            font-size: 35px; 
+            font-family: 'Radley', serif; 
+            margin: 15px;"
+        }
+        span{
+            color: #000001;
+        }
+        span.brown{
+            color: #BD8F53
+        }
+        #navihome{
+            display: block;
+            background-color:#084C61;
+            color: #F4F1E8;
+            text-align: right;
+            font-weight: 800;
+            padding-right: 70px;
+            border-top-left-radius:30px;
+            border-bottom-left-radius: 30px;
+            font-size: 28px;
+            padding-left:40px;
+            border: 1px solid darkred;
+            width: 40%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /*margin-left: 150px;*/
+            /*margin-top: 20px;*/
+            margin-bottom: 20px;
+            position: relative;
+            float: right;
+        }                       
+        #naviactivity{
+            display: block;
+            background-color:#084C61;
+            color: #F4F1E8;
+            text-align: right;
+            font-weight: 800;
+            padding-right: 70px;
+            border-top-left-radius:30px;
+            border-bottom-left-radius: 30px;
+            font-size: 28px;
+            padding-left:40px;
+            border: 1px solid darkred;
+            width: 60%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 150px;
+            /*margin-top: 20px;*/
+            margin-bottom: 20px;
+            position: relative;
+            float: right;
+        }
+        div.mycstu{
+            display:flex;
+            justify-content: space-between;
+        }
+        .centercstu{
+            margin-left: 160px;
+        }
+        .navilink {
+            text-decoration: none;
+            color: #F4F1E8;
+        }
+        .inline{
+            display:inline
+        }
+        .inlineblock{
+            display:inline-block;
+        }
+        .width50{
+            /*width: 50%;*/
+            display: inline-block;
+        }
+        .width501{
+            /*width: 50%;*/
+            display: inline-block;
+        }
+        .width502{
+            /*width: 50%;*/
+            display: inline-block;
+        }
+        .fsize23{
+            font-size: 23px
+        }
+        .flex{
+            display: flex;
+            position: relative;
+            top: 50px;
+            justify-content: center;
+        }
+        .star1{
+            float:left;
+            width:210px
+        }
+        .cstu{ 
+            color: #9b4819
+        }
+        .passport{
+            position:relative;
+            top:-20px
+        }
+        .line{
+            /*width:200px;*/
+            width: 80%;
+            max-width: 300px;
+            padding-left: 100px;
+            margin-top: 0px;
+        }
+        .gettoknow{
+            color: #191919;
+            font-size: 45px;
+            /*margin-left: 200px;*/
+            margin-bottom: 5px;
+            /*margin-top: 25px;*/
+            text-align: center;
+        }
+        .personalinfo{
+            /*margin-left: 270px;*/
+            display: flex;
+            /*margin-bottom: 5px;*/
+            /*margin-top: 20px;*/
+            justify-content: center;
+        }
+        .list{
+            /*padding-left: 300px; */
+            display: flex;
+            line-height: 25px; 
+            font-family: 'Carlito', sans-serif;
+            font-size: 19px;
+            justify-content: center;
+        }
+        #picofme{
+            /*height:400px;*/
+            /*width:auto;*/
+            width: 300px;
+            height: auto;
+            /*padding:20px;*/
+            margin-top: 55px;
+            /*margin-left: 10px;*/
+        }
+        .star2{
+            width:100px;
+            height: 100px; 
+            vertical-align:top; 
+            position:relative;
+            right:-50px;
+            top: 300px;
+        }
+        .circle{
+            width: 220px;
+        }
+        .padding5{
+            padding-left: 5%;
+        }
+        #arrow{
+            vertical-align: top;
+            margin-top: 40px;
+            width: 300px;
+            margin-left: 50px;
+        }
+        .star3{
+            width: 200px;
+            margin-left: 100px;
+            /*padding-left: 180px;
+            position: relative;
+            top: -35px;*/
+        }
+
+
+
+        .height{
+            height: 59px;
+        }
+        }
+        #book2{
+            width: 200px;
+            position: relative;
+            left: 220px;
+            top: 55px;
+            rotate: -5deg;
+        }
+        #leaf{
+            width: 205px;
+            height: auto;
+            position: relative;
+            left: 70px;
+            top: 120px
+        }
+
+
+
+        div.threelines{
+            display: inline;
+            vertical-align: top;
+        }
+        #activitypic{
+            width: 520px;
+            padding-left: 500px;
+            padding-right: auto;
+            padding-top: 55px;
+            padding-bottom: 20px;
+        }
+        #threelines{
+            width: 150px;
+            position: relative;
+            top: -60px;"
+        }
+        #firstmeet{
+            text-align: center;
+            font-size: 50px;
+            color: #9B4819;
+            font-family: 'Radley', serif ;
+            font-weight: 500;
+        }
+        #date{
+            text-align: center;
+            color: #000001;
+            font-family: 'Carlito', sans-serif;
+            font-size: 25px;
+            font-weight: 275;
+        }
+        .sixpic{
+            width:100%;
+            height:auto;
+        }
+        .flex-container{
+            display: flex;
+            margin-top:20px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .flex-container > div {
+            width: 33%;
+            margin: 10px;
+            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
