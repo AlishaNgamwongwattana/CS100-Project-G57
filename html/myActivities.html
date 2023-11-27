@@ -33,6 +33,7 @@
           .col-11 {width: 91.66%;}
           .col-12 {width: 100%;}
 
+/*          for mobile*/
           @media only screen and (max-width: 600px) {
             [class*="col-"] {
               width: 100%;
@@ -47,11 +48,17 @@
                 display: flex;
                 justify-content: center;
             }
+            .sixpic{
+                width:250%;
+                height:auto;
+            }
             #firstmeet{
                 justify-content: center;
+                margin-top: 20px;
             }
           }
 
+/*          for tablet*/
           @media only screen and (max-width: 768px) {           
             [class*="col-"] {
               width: 100%;
@@ -65,6 +72,25 @@
             .width502 {
                 display: flex;
                 justify-content: center;
+            }
+            .flex-container{
+                display: flex;
+                flex-wrap: wrap;
+                align-content: stretch;
+                margin-top:20px;
+                margin-left: 80px;
+                margin-right: 75px;
+            }
+            .flex-container > div {
+                width: 45%;
+                margin: 10px;
+                margin-top: 20px;
+                text-align: center;
+/*                background-color: skyblue;*/
+            }
+            #firstmeet{
+              margin-top: 150px;
+              justify-content: center;
             }
           }
 
@@ -223,38 +249,37 @@
         </div>
 
 
-
-        <div id="firstmeet" class="col-12">
-            First Meet <span>CSTU38</span>
-        </div>
-                
-        <div id="date">
-            6th August, 2023
-        </div>
-
-        <div class="flex-container">
-          <div>
-            <img src="../image/act1.jpg" class="sixpic">
+        <div>
+          <div id="firstmeet" class="col-12">
+              First Meet <span>CSTU38</span>
           </div>
-          <div>
-            <img src="../image/act2.jpg" class="sixpic">
+                  
+          <div id="date">
+              6th August, 2023
           </div>
-          <div>
-            <img src="../image/act3.jpg" class="sixpic">
-          </div> 
         </div>
 
-        <div class="flex-container">
-          <div>
-            <img src="../image/act4.jpg" class="sixpic">
+        
+          <div class="flex-container">
+            <div>
+              <img src="../image/act1.jpg" class="sixpic">
+            </div>
+            <div>
+              <img src="../image/act2.jpg" class="sixpic">
+            </div>
+            <div>
+              <img src="../image/act3.jpg" class="sixpic">
+            </div>
+            <div>
+              <img src="../image/act4.jpg" class="sixpic">
+            </div>
+            <div>
+              <img src="../image/act5.jpg" class="sixpic">
+            </div>
+            <div>
+              <img src="../image/act6.jpg" class="sixpic">
+            </div> 
           </div>
-          <div>
-            <img src="../image/act5.jpg" class="sixpic">
-          </div>
-          <div>
-            <img src="../image/act6.jpg" class="sixpic">
-          </div> 
-        </div>
 
         <div class="height"></div>
 
