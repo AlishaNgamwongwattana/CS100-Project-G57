@@ -56,6 +56,35 @@ function validateFormOnInput() {
   validateEmail();
 }
 
+function validateWorkTitle() {
+  const workTitleInput = document.getElementById("workTitle");
+  const errorElement = document.getElementById("workTitleError");
+
+  if (workTitleInput.value.length > 20) {
+    errorElement.textContent = "Work/Activity Title should not exceed 20 characters.";
+    return false;
+  } else {
+    errorElement.textContent = ""; // Clear the error message when valid
+  }
+  return true;
+}
+document.getElementById("workTitle").addEventListener("input", validateWorkTitle);
+
+
+function validateDescription() {
+  const descriptionInput = document.getElementById("description");
+  const errorElement = document.getElementById("descriptionError");
+
+  if (descriptionInput.value.length < 10) {
+    errorElement.textContent = "Description should be at least 10 characters.";
+    return false;
+  } else {
+    errorElement.textContent = "";
+    return true;
+  }
+}
+
+
 // Function to fetch activity types from the backend
 async function fetchActivityTypes() {
   try {
@@ -90,78 +119,55 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
   populateActivityTypes(activityTypes);
 });
+function validateDescription() {
+  const descriptionInput = document.getElementById("description");
+  const errorElement = document.getElementById("descriptionError");
 
-// Function to submit the form
-// Function to submit the form
+  if (descriptionInput.value.length < 10) {
+    errorElement.textContent = "Description should be at least 10 characters.";
+    return false;
+  } else {
+    errorElement.textContent = "";
+  }
+  return true;
+}
 async function submitForm(event) {
   event.preventDefault();
 
-  // Validate form inputs before submission
-  if (!validateName() || !validateStudentID() || !validateEmail()) {
+  if (!validateName() || !validateStudentID() || !validateEmail() || !validateDescription()) {
+    alert("Please fill out all required fields correctly.");
     return;
   }
 
-  const startDateInput = document.getElementById("startDate").value;
-  const endDateInput = document.getElementById("endDate").value;
-  const startDate = new Date(startDateInput);
-  const endDate = new Date(endDateInput);
 
-  if (endDate <= startDate) {
-    alert("End datetime should be after the start datetime.");
-    return;
-  }
+  displaySubmittedData();
+}
 
-  // Create the data object to send to the backend
-  const formData = new FormData(event.target);
-  const data = {
-    first_name: formData.get("fullname").split(" ")[0],
-    last_name: formData.get("fullname").split(" ")[1],
-    student_id: parseInt(formData.get("studentID")),
-    email: formData.get("email"),
-    title: formData.get("workTitle"),
-    type_of_work_id: parseInt(formData.get("activityType")),
-    academic_year: parseInt(formData.get("academicYear")) - 543,
-    semester: parseInt(formData.get("semester")),
-    start_date: formData.get("startDate"),
-    end_date: formData.get("endDate"),
-    location: formData.get("location"),
-    description: formData.get("description")
+function displaySubmittedData() {
+  const formData = document.getElementById("myForm");
+
+  const submittedData = {
+    "Fullname": formData.elements.fullname.value,
+    "Student ID": formData.elements.studentID.value,
+    "University Email": formData.elements.email.value,
+    "Work/Activity Title": formData.elements.workTitle.value,
+    "Type of Work/Activity": formData.elements.activityType.value,
+    "Academic Year": formData.elements.academicYear.value,
+    "Semester": formData.elements.semester.value,
+    "Start Date/Time": formData.elements.startDate.value,
+    "End Date/Time": formData.elements.endDate.value,
+    "Location": formData.elements.location.value,
+    "Description": formData.elements.description.value,
   };
 
-  console.log(data);
-
-  try {
-    // Send data to the backend using POST request
-    const response = await fetch(`http://${window.location.hostname}:${port}/record`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      const responseData = await response.json();
-      console.log("Form data submitted successfully!");
-
-      // Format JSON data for display
-      const formattedData = Object.entries(responseData.data)
-        .map(([key, value]) => `"${key}": "${value}"`)
-        .join("\n");
-
-      // Display success message with formatted data
-      alert(responseData.message + "\n" + formattedData);
-
-      document.getElementById("myForm").reset();
-    } else {
-      console.error("Failed to submit form data.");
-
-      // Display error message
-      alert("Failed to submit form data. Please try again.");
-    }
-  } catch (error) {
-    console.error("An error occurred while submitting form data:", error);
+  let displayHTML = "<div class='submitted-data-container'><h2>Submitted Data</h2><ul>";
+  for (const [key, value] of Object.entries(submittedData)) {
+    displayHTML += `<li><strong>${key}:</strong> ${value}</li>`;
   }
+  displayHTML += "</ul></div>";
+
+  const displayDiv = document.getElementById("displayData");
+  displayDiv.innerHTML = displayHTML;
 }
 
 // Event listener for form submission
@@ -173,3 +179,7 @@ document
   .getElementById("studentID")
   .addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+
+function clearForm() {
+  document.getElementById("myForm").reset();
+}

@@ -133,16 +133,12 @@
           <div class="form-group">
             <label for="workTitle">Work/Activity Title</label>
             <input type="text" id="workTitle" name="workTitle" />
+            <span id="workTitleError" class="error"></span>
+
           </div>
 
           <!-- Type of Work/Activity Field -->
           <div class="form-group">
-            <label for="activityType">Type of Work/Activity</label>
-            <select id="activityType" name="activityType">
-              <option value="" disabled selected>Select an option</option>
-            </select>
-          </div>
-          <!-- <div class="form-group">
             <label for="activityType">Type of Work/Activity</label>
             <select id="activityType" name="activityType">
               <option value="" disabled selected>Select an option</option>
@@ -154,7 +150,7 @@
               <option value="Competition">Competition</option>
               <option value="Computer Science">Computer Science</option>
             </select>
-          </div> -->
+          </div>
 
           <!-- Academic Year Field -->
           <div class="form-group">
@@ -205,15 +201,17 @@
           <!-- Description Field -->
           <div class="form-group">
             <label for="description">Description</label>
-            <textarea id="description" name="description" rows="4"></textarea>
+            <textarea id="description" name="description" rows="4" placeholder="Please enter at least 10 characters"></textarea>
+            <span id="descriptionError" class="error"></span>
           </div>
 
-          <!-- Submit Button -->
-          <div class="form-group">
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
-      </div>
+           <!-- Submit Button -->
+            <div class="form-group">
+              <input type="submit" value="Submit" />
+              <input type="button" value="Clear" onclick="clearForm()" />
+            </div>
+          </form>
+        </div>
 
       <!-- JavaScript -->
       <script src="script.js"></script>
