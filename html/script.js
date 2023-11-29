@@ -150,13 +150,10 @@ function displaySubmittedData() {
     "Fullname": formData.elements.fullname.value,
     "Student ID": formData.elements.studentID.value,
     "University Email": formData.elements.email.value,
-    "Work/Activity Title": formData.elements.workTitle.value,
     "Type of Work/Activity": formData.elements.activityType.value,
     "Academic Year": formData.elements.academicYear.value,
     "Semester": formData.elements.semester.value,
     "Start Date/Time": formData.elements.startDate.value,
-    "End Date/Time": formData.elements.endDate.value,
-    "Location": formData.elements.location.value,
     "Description": formData.elements.description.value,
   };
 
