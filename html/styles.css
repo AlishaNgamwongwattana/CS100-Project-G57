@@ -1,6 +1,10 @@
 /* Set the font family for the entire body */
-body {
+/*body {
   font-family: Arial, sans-serif;
+}*/
+
+span{
+  color: #9b4819;
 }
 
 /* Styling for the form container */
@@ -8,7 +12,7 @@ body {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 3px solid #BD8F53;
   border-radius: 5px;
 }
 
@@ -54,11 +58,24 @@ body {
 
 /* Styling for the submit button */
 .form-group input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color: #084C61;
+  color: #F4F1E8;
+  font-family: 'Radley', serif;
+  font-size: 18px;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-group input[type="button"] {
+  background-color: #F4F1E8;
+  color: #000001;
+  font-family: 'Radley', serif;
+  font-size: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -81,4 +98,17 @@ body {
   display: block;
   margin-top: 5px;
 }
-
+#output-container p {
+  width: 50%;
+  font-family: 'Radley', serif;
+  font-size: 21px;
+/*  color: #000001;*/
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+  padding: 5px;
+/*  border: 1px solid #ccc;*/
+  margin-bottom: 10px;
+}

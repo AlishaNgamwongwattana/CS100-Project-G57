@@ -56,20 +56,6 @@ function validateFormOnInput() {
   validateEmail();
 }
 
-function validateWorkTitle() {
-  const workTitleInput = document.getElementById("workTitle");
-  const errorElement = document.getElementById("workTitleError");
-
-  if (workTitleInput.value.length > 20) {
-    errorElement.textContent = "Work/Activity Title should not exceed 20 characters.";
-    return false;
-  } else {
-    errorElement.textContent = ""; // Clear the error message when valid
-  }
-  return true;
-}
-document.getElementById("workTitle").addEventListener("input", validateWorkTitle);
-
 
 function validateDescription() {
   const descriptionInput = document.getElementById("description");
@@ -180,3 +166,100 @@ document.getElementById("email").addEventListener("input", validateEmail);
 function clearForm() {
   document.getElementById("myForm").reset();
 }
+
+
+let clicked = false;
+
+  function displayname() {
+    if (!clicked) {
+
+      let output = document.getElementById('fullname').value;
+      let outputContainer = document.getElementById('output-container');
+      let newOutputParagraph = document.createElement('p');
+      newOutputParagraph.textContent = "Name: " + output;
+      outputContainer.appendChild(newOutputParagraph);
+
+      document.getElementById('submit').disabled = true;
+        clicked = true;
+    }
+  }
+
+  document.getElementById('submit').addEventListener('click', displayname);
+
+  function displayID() {
+    let output = document.getElementById('studentID').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Student ID: " +output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+  document.getElementById('submit').addEventListener('click', displayID);
+
+
+  function displayemail() {
+    let output = document.getElementById('email').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Email: " +output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+  document.getElementById('submit').addEventListener('click', displayemail);
+
+
+  function displayactivity() {
+    let output = document.getElementById('activityType').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Type of Activity: " +output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+    document.getElementById('submit').addEventListener('click', displayactivity);
+
+
+  function displayyear() {
+    let output = document.getElementById('academicYear').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Academic Year: " + output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+
+    document.getElementById('submit').addEventListener('click', displayyear);
+
+  function displaysemester() {
+    let output = document.getElementById('semester').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Semester: " + output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+
+      document.getElementById('submit').addEventListener('click', displaysemester);
+
+
+  function displaydate() {
+    let output = document.getElementById('startDate').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Date: " + output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+
+      document.getElementById('submit').addEventListener('click', displaydate);
+
+
+  function displaydescription() {
+    let output = document.getElementById('description').value;
+    let outputContainer = document.getElementById('output-container');
+    let newOutputParagraph = document.createElement('p');
+    newOutputParagraph.textContent = "Comments: " + output;
+    outputContainer.appendChild(newOutputParagraph);
+  }
+
+      document.getElementById('submit').addEventListener('click', displaydescription);
+    
+
+// let output = prompt('Please enter a prompt message:');
+//       let outputContainer = document.getElementById('output-container');
+//       let newOutputParagraph = document.createElement('p');
+//       newOutputParagraph.textContent = output + " " + document.getElementById('output').value;
