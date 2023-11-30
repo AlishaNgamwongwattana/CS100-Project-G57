@@ -1,6 +1,7 @@
 const config = {
   backendUrl: "http://localhost:8000/", // Default backend URL
 };
+
 const port = 8000;
 
 // Function to validate Firstname and Lastname
@@ -54,6 +55,7 @@ function validateFormOnInput() {
   validateName();
   validateStudentID();
   validateEmail();
+  validateDescription();
 }
 
 
@@ -69,7 +71,6 @@ function validateDescription() {
     return true;
   }
 }
-
 
 // Function to fetch activity types from the backend
 async function fetchActivityTypes() {
@@ -105,18 +106,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const activityTypes = await fetchActivityTypes();
   populateActivityTypes(activityTypes);
 });
-function validateDescription() {
-  const descriptionInput = document.getElementById("description");
-  const errorElement = document.getElementById("descriptionError");
-
-  if (descriptionInput.value.length < 10) {
-    errorElement.textContent = "Description should be at least 10 characters.";
-    return false;
-  } else {
-    errorElement.textContent = "";
-  }
-  return true;
-}
 async function submitForm(event) {
   event.preventDefault();
 
@@ -124,8 +113,6 @@ async function submitForm(event) {
     alert("Please fill out all required fields correctly.");
     return;
   }
-
-
   displaySubmittedData();
 }
 
@@ -158,14 +145,15 @@ document.getElementById("myForm").addEventListener("submit", submitForm);
 
 // Event listeners for input validation on user input
 document.getElementById("fullname").addEventListener("input", validateName);
-document
-  .getElementById("studentID")
-  .addEventListener("input", validateStudentID);
+document.getElementById("studentID").addEventListener("input", validateStudentID);
 document.getElementById("email").addEventListener("input", validateEmail);
+document.getElementById("description").addEventListener("input", validateDescription);
 
 function clearForm() {
   document.getElementById("myForm").reset();
 }
+
+
 
 
 let clicked = false;
